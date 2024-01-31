@@ -1,0 +1,67 @@
+{% extends "layout.html" %}
+
+{% block title %} Home {{super ()}} {% endblock %}
+{% block content %}
+<br>
+<br>
+<div class = "mx-auto" style="width: 200px;">
+<form action="/connect" method="POST">
+    <input class="btn btn-primary btn-lg" type="submit" value="connect"><br>
+    <br/>
+    <br/>
+</div>
+
+</form>
+<div class="container-sm">
+<form action="/send" method="post" enctype="multipart/form-data">
+    <div class="input-group mb-3">
+        <input type="file" name = "list" class="form-control" id="inputGroupFile02">
+      </div>
+    <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon1">Topic</span>
+        <input type="text" name = "topic" class="form-control" placeholder="Enter Program Topic" aria-label="text" aria-describedby="basic-addon1">
+      </div>
+
+    <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon2">Meeting Link</span>
+        <input type="text" name = "meetLink" class="form-control" placeholder="Enter meeting link" aria-label="text" aria-describedby="basic-addon1">
+      </div>
+
+    <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon3">Time</span>
+        <input type="text" name = "time" class="form-control" placeholder="When" aria-label="text" aria-describedby="basic-addon1">
+      </div>
+
+     <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon4">Message</span>
+        <input type="text" name = "message" class="form-control" placeholder="Enter your message" aria-label="text" aria-describedby="basic-addon1">
+      </div>
+
+     <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon1">Sign</span>
+        <input type="text" name = "sign" class="form-control" placeholder="Enter your first name" aria-label="text" aria-describedby="basic-addon1">
+      </div>
+
+     <div class="input-group mb-3">
+        <label class="input-group-text" for="inputGroupSelect01">American Space</label>
+        <select class="form-select" name="as" id="inputGroupSelect01">
+          <option selected>Select your American Space</option>
+          <option value="Bahir Dar American Corner">Bahir Dar American Corner</option>
+          <option value="CJCR American Center">CJCR American Center</option>
+          <option value="Dire Dawa American Corner">Dire Dawa American Corner</option>
+          <option value="Jimma American Corner">Jimma American Corner</option>
+          <option value="Mekelle American Corner">Mekelle American Corner</option>
+          <option value="Satchmo American Center">Satchomo American Center</option>
+	    <option value="US Embassy Addis Ababa">US Embassy Addis Ababa</option>
+          <option value="American Space Ethiopia Team">American Spaces Ethiopia Team</option>
+        </select>
+      </div>
+    </div>
+
+         <div class = "mx-auto" style="width: 200px;">
+            <input class="btn btn-primary btn-lg" type="submit" value="send"><br>
+        </div>
+</form>
+
+{% endblock %}
+
